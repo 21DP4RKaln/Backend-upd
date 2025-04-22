@@ -2,7 +2,7 @@
   <div class="main-container" :class="{ 'light-theme': isLightTheme }">
     <header class="header">
       <div class="header-content">
-        <router-link to="/" active-class="active" @click="closeMobileNav">
+        <router-link to="/" active-class="active">
           <div class="logo">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
                 <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

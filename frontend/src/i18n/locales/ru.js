@@ -4,9 +4,9 @@ export default {
 
     // Navigation
     nav: {
-        home: 'Главная',
         calendar: 'Календарь',
         achievements: 'Достижения',
+        about: 'О нас',
         login: 'Вход',
         signup: 'Регистрация',
         logout: 'Выход'

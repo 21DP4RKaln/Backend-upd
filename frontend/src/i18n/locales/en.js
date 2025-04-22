@@ -4,9 +4,9 @@ export default {
 
     // Navigation
     nav: {
-        home: 'Home',
         calendar: 'Calendar',
         achievements: 'Achievements',
+        about: 'About',
         login: 'Login',
         signup: 'Sign Up',
         logout: 'Logout'

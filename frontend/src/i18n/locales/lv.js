@@ -4,9 +4,9 @@ export default {
 
     // Navigation
     nav: {
-        home: 'Sākums',
         calendar: 'Kalendārs',
         achievements: 'Sasniegumi',
+        about: 'Par mums',
         login: 'Pieslēgties',
         signup: 'Reģistrēties',
         logout: 'Iziet'
