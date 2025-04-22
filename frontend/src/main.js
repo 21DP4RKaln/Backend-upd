@@ -11,6 +11,7 @@ import HomePage from './components/HomePage.vue';
 import CalendarPage from './components/CalendarPage.vue';
 import AchievementsPage from './components/AchievementsPage.vue';
 import AuthPage from './components/AuthPage.vue';
+import AboutPage from './components/AboutPage.vue';
 
 // Initialize auth service
 auth.init();
@@ -53,6 +54,11 @@ const routes = [
         path: '/auth',
         component: AuthPage,
         meta: { title: 'Log In - TaskMaster' }
+    },
+    {
+        path: '/about',
+        component: AboutPage,
+        meta: { title: 'About - TaskMaster' }
     },
     // Catch-all 404 route
     {

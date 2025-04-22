@@ -718,20 +718,18 @@ export default {
 }
 
 .or-divider {
-  position: relative;
-  text-align: center;
-  margin: 1.5rem 0;
-  color: var(--color-text-secondary);
+  display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
 }
 
 .or-divider::before,
 .or-divider::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  width: calc(50% - 3rem);
-  height: 1px;
-  background-color: var(--color-border);
+    flex: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .or-divider::before {
@@ -743,11 +741,7 @@ export default {
 }
 
 .or-divider span {
-  display: inline-block;
   padding: 0 1rem;
-  background-color: var(--bg-gradient-start);
-  position: relative;
-  z-index: 1;
 }
 
 .light-theme .or-divider span {
