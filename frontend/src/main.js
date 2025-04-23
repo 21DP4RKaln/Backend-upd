@@ -12,6 +12,7 @@ import CalendarPage from './components/CalendarPage.vue';
 import AchievementsPage from './components/AchievementsPage.vue';
 import AuthPage from './components/AuthPage.vue';
 import AboutPage from './components/AboutPage.vue';
+import AdminPage from './components/AdminPage.vue';
 
 // Initialize auth service
 auth.init();
@@ -26,6 +27,22 @@ const requireAuth = (to, from, next) => {
                 mode: 'login'
             }
         });
+    } else {
+        next();
+    }
+};
+
+const requireAdmin = (to, from, next) => {
+    if (!auth.isAuthenticated()) {
+        next({
+            path: '/auth',
+            query: {
+                redirect: to.fullPath,
+                mode: 'login'
+            }
+        });
+    } else if (!auth.isAdmin()) {
+        next({ path: '/' });
     } else {
         next();
     }
@@ -60,6 +77,12 @@ const routes = [
         component: AboutPage,
         meta: { title: 'About - TaskMaster' }
     },
+    {
+        path: '/admin',
+        component: AdminPage,
+        beforeEnter: requireAdmin,
+        meta: { title: 'Admin Dashboard - TaskMaster' }
+    },
     // Catch-all 404 route
     {
         path: '/:pathMatch(.*)*',
@@ -93,6 +116,8 @@ router.afterEach((to) => {
     } else if (to.path === '/auth') {
         const mode = to.query.mode === 'register' ? i18n.global.t('nav.signup') : i18n.global.t('nav.login');
         document.title = `${mode} - ${appName}`;
+    } else if (to.path === '/admin') {
+        document.title = `Admin - ${appName}`;
     } else {
         document.title = to.meta.title || appName;
     }

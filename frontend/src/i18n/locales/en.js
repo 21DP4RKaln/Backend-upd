@@ -9,7 +9,8 @@ export default {
         about: 'About',
         login: 'Login',
         signup: 'Sign Up',
-        logout: 'Logout'
+        logout: 'Logout',
+        admin: 'Admin Dashboard'
     },
 
     // Home Page

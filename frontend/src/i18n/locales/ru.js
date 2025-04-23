@@ -9,7 +9,8 @@ export default {
         about: 'О нас',
         login: 'Вход',
         signup: 'Регистрация',
-        logout: 'Выход'
+        logout: 'Выход',
+        admin: 'Панель администратора'
     },
 
     // Home Page

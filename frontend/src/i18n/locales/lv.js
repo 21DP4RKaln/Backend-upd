@@ -9,7 +9,8 @@ export default {
         about: 'Par mums',
         login: 'Pieslēgties',
         signup: 'Reģistrēties',
-        logout: 'Iziet'
+        logout: 'Iziet',
+        admin: 'Administratora panelis'
     },
 
     // Home Page
